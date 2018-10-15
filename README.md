@@ -3,6 +3,7 @@ Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate 
 - [Why?](#why)
 - [Kubernetes](#lets-talk-about-kubernetes)
 - [Prometheus](#lets-talk-about-prometheus)
+- [Service meshes](#lets-talk-about-service-meshes)
 - [Serverless](#lets-talk-about-serverless)
 
 ----
@@ -19,7 +20,11 @@ A fair part of my work consists of being [on the road](http://mhausenblas.info/o
 
 ## Let's talk about Kubernetes
 
-So you want to benefit from [Kubernetes](https://kubernetes.io/)? I've got good news and not so good news for you: yes, it's totally possible but you gotta do your homework. You have to first do the boring stuff (!)
+So you want to benefit from [Kubernetes](https://kubernetes.io/), right? You want portable applications, getting features out to your customers faster, use modern deployment mechanisms, have autoscaling, and more? 
+
+I've got good news and not so good news for you. Yes, it's totally feasible, but you gotta do your homework first. You have to first do the, surprise, boring stuff (!)
+
+Let me walk you through it …
 
 ### Begin at the beginning
 
@@ -27,7 +32,20 @@ So you want to benefit from [Kubernetes](https://kubernetes.io/)? I've got good 
 
 &mdash;&mdash; [Lewis Carroll, Alice in Wonderland](https://www.goodreads.com/quotes/6305-begin-at-the-beginning-the-king-said-very-gravely-and)
 
-So, what *is* the beginning? It starts with your team, source code, CI/CD pipeline
+So, what *is* the beginning? It starts with your team and your wider organization. Like, everyone. This is the hard part and unfortunately the technologies available can't help you there. Make sure that [developers and folks with ops roles are incentivized](https://www.usenix.org/conference/lisa16/conference-program/presentation/eckhardt) in the same direction. Go for lunch together. Talk. [Whatever it takes](https://basecamp.com/books/calm), make sure you're on the same page for what is coming. Do it now, I'll wait here …
+
+OK. You ready?
+
+Let's get to the "easy" stuff, the tech. Here's a little checklist, in this order:
+
+- [ ] All of our source code is in a version control system such as Git, Mercurial, svn or whatnot.
+- [ ] We know about container (base) image hygiene such as footprint, build vs runtime environment, attack surface, etc.  
+- [ ] We have a CI/CD pipeline and know how to use it.
+- [ ] We have a (private, secure) container registry and know how to use it.
+- [ ] Our developers have either local Kubernetes environments or access to dedicated namespaces for day-to-day development.
+- [ ] Our dev and ops folks have a 360 view on apps and infra, we use observability tooling everywhere.
+
+All checked off? Cool, we're ready.
 
 ### Good practices
 
@@ -38,12 +56,14 @@ Some pointers to get you started:
   - [Managing Kubernetes](http://shop.oreilly.com/product/0636920146667.do)
 - Development:
   - [Developing on Kubernetes](https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/)
-  - [Appls life cycle](http://shop.oreilly.com/product/0636920175131.do)
+  - [Apps life cycle](http://shop.oreilly.com/product/0636920175131.do)
   - [Troubleshooting apps](http://troubleshooting.kubernetes.sh)
 - Functional areas: 
   - [Stateful Apps](http://stateful.kubernetes.sh)
   - [Network](https://mhausenblas.info/cn-ref)
 
 ## Let's talk about Prometheus
+
+## Let's talk about service meshes
 
 ## Let's talk about serverless
