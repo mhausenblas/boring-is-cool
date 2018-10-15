@@ -1,10 +1,19 @@
 Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate and cloud native [ambassador](https://www.cncf.io/people/ambassadors/). Here, I share some thoughts and considerations around using cloud native technologies, including Kubernetes, observability tools such as Prometheus, and serverless offerings.
 
-## Why you would want to read this
+- [Why?](#why)
+- [Kubernetes](#lets-talk-about-kubernetes)
+- [Prometheus](#lets-talk-about-prometheus)
+- [Serverless](#lets-talk-about-serverless)
+
+----
+
+## Why?
+
+### Why you would want to read this
 
 You have heard about cloud native [technologies](https://landscape.cncf.io/) and [success](https://kubernetes.io/case-studies/) [stories](https://serverless.com/learn/use-cases/). You wonder where and how to start and get the most out of it. Congrats! You're exactly right here.
 
-## Why I am writing this
+### Why I am writing this
 
 A fair part of my work consists of being [on the road](http://mhausenblas.info/on-the-road.html), talking with folks at events, with customers on-sites, meeting up with partners to understand their offerings, helping on StackOverflow and on various Slack channels. I learn something every time when I'm having these discussions and even more when someone asks me how to do something or why things are like they are. This is my attempt to share some of this knowledge, to give back to the community. Also, I wanted to have a place on the Internetz I can point people to get started …
 
@@ -36,5 +45,3 @@ Some pointers to get you started:
 ## Let's talk about Prometheus
 
 ## Let's talk about serverless
-
-## Let's talk about 
