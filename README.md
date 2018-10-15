@@ -3,4 +3,6 @@
 
 ## Let's talk about Kubernetes
 
-Do your homework
+So you want to benefit from [Kubernetes](https://kubernetes.io/)?
+
+Do your homework!
