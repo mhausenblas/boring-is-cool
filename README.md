@@ -1,2 +1,1 @@
-# boring-is-cool
-Advocacy site for boring technology
+This is an advocacy site for boring technology.
