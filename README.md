@@ -1,10 +1,10 @@
 Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate and cloud native [ambassador](https://www.cncf.io/people/ambassadors/). Here, I share some thoughts and considerations around using cloud native technologies, including Kubernetes, observability tools such as Prometheus, and serverless offerings.
 
-- [Why?](#why)
-- [Kubernetes](#lets-talk-about-kubernetes)
-- [Prometheus](#lets-talk-about-prometheus)
-- [Service meshes](#lets-talk-about-service-meshes)
-- [Serverless](#lets-talk-about-serverless)
+1. [Why?](#why)
+1. [Kubernetes](#lets-talk-about-kubernetes)
+1. [Prometheus](#lets-talk-about-prometheus)
+1. [Service meshes](#lets-talk-about-service-meshes)
+1. [Serverless](#lets-talk-about-serverless)
 
 ----
 
@@ -51,14 +51,14 @@ All checked off? Cool, we're ready.
 
 Some pointers to get you started:
 
-- Install:
+1. Install:
   - [Kubernetes the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
   - [Managing Kubernetes](http://shop.oreilly.com/product/0636920146667.do)
-- Development:
+1. Development:
   - [Developing on Kubernetes](https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/)
   - [Apps life cycle](http://shop.oreilly.com/product/0636920175131.do)
   - [Troubleshooting apps](http://troubleshooting.kubernetes.sh)
-- Functional areas: 
+1. Functional areas: 
   - [Stateful Apps](http://stateful.kubernetes.sh)
   - [Network](https://mhausenblas.info/cn-ref)
 
