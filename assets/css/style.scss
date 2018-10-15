@@ -26,6 +26,10 @@ header {
     border-bottom: 1px dashed #6f4f09;
 }
 
+header h1 {
+    padding-left: 12px;
+}
+
 header h1:before {
     content: "# ";
 }
