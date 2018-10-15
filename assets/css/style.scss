@@ -3,25 +3,6 @@
 
 @import "{{ site.theme }}";
 
-// table {
-//     background-color: #ffffff;
-// }
-
-// th, td {
-//     font-size: 16px;
-//     font-weight: 600;
-//     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//     padding: 10px;
-//     background: unset;
-//     text-align: center;
-// }
-
-// table {
-//     -webkit-border-radius: 2px;
-//     -moz-border-radius: 2px;
-//     border-radius: 2px;
-// }
-
 header {
     border-bottom: 1px dashed #6f4f09;
 }
@@ -57,6 +38,10 @@ hr {
     border-bottom: 1px solid #303030;
     color: #303030;
     margin-top: 30px;
+}
+
+#main_content {
+    width: 65%;
 }
 
 #main_content h2 {
