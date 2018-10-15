@@ -24,8 +24,10 @@ So you want to benefit from [Kubernetes](https://kubernetes.io/)? I've got good 
 ### Begin at the beginning
 
 > "Begin at the beginning," the King said, very gravely, "and go on till you come to the end: then stop.”
->
-&mdash; [Lewis Carroll, Alice in Wonderland](https://www.goodreads.com/quotes/6305-begin-at-the-beginning-the-king-said-very-gravely-and)
+
+&mdash;&mdash; [Lewis Carroll, Alice in Wonderland](https://www.goodreads.com/quotes/6305-begin-at-the-beginning-the-king-said-very-gravely-and)
+
+So, what *is* the beginning? It starts with your team, source code, CI/CD pipeline
 
 ### Good practices
 
