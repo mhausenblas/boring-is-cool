@@ -1,6 +1,5 @@
+theme: jekyll-theme-hacker
 title: Boring Is Cool
 description: Advocacy site for boring technology
 show_downloads: false
 google_analytics:
-
-theme: jekyll-theme-hacker
