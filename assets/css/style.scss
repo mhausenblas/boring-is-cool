@@ -37,8 +37,7 @@ ul li.task-list {
     list-style-type: none;
 }
 
-input.task-list-item-checkbox {
-    :enabled
+input.task-list-item-checkbox:enabled {
     margin-right: 10px;
 }
 
