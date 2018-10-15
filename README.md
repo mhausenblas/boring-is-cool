@@ -38,12 +38,12 @@ OK. You ready?
 
 Let's get to the "easy" stuff, the tech. Here's a little checklist, in this order:
 
-- [ ] All of our source code is in a version control system such as Git, Mercurial, svn or whatnot.
-- [ ] We know about container (base) image hygiene such as footprint, build vs runtime environment, attack surface, etc.  
-- [ ] We have a CI/CD pipeline and know how to use it.
-- [ ] We have a (private, secure) container registry and know how to use it.
-- [ ] Our developers have either local Kubernetes environments or access to dedicated namespaces for day-to-day development.
-- [ ] Our dev and ops folks have a 360 view on apps and infra, we use observability tooling everywhere.
+- All of our source code is in a version control system such as Git, Mercurial, svn or whatnot.
+- We know about container (base) image hygiene such as footprint, build vs runtime environment, attack surface, etc.  
+- We have a CI/CD pipeline and know how to use it.
+- We have a (private, secure) container registry and know how to use it.
+- Our developers have either local Kubernetes environments or access to dedicated namespaces for day-to-day development.
+- Our dev and ops folks have a 360 view on apps and infra, we use observability tooling everywhere.
 
 All checked off? Cool, we're ready.
 
