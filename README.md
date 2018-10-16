@@ -1,4 +1,4 @@
-Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate and cloud native [ambassador](https://www.cncf.io/people/ambassadors/). Here, I share some thoughts and considerations around using cloud native technologies, including Kubernetes, observability tools such as Prometheus, and serverless offerings.
+Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate and cloud native [ambassador](https://www.cncf.io/people/ambassadors/). Here, I share some thoughts and considerations around using cloud native technologies, including Kubernetes, observability tools such as Prometheus, service meshes,  and serverless offerings.
 
 1. [Why?](#why)
 1. [Kubernetes](#lets-talk-about-kubernetes)
@@ -45,11 +45,17 @@ Let's get to the "easy" stuff, the tech. Here's a little checklist, in this orde
 - Our developers have either local Kubernetes environments or access to dedicated namespaces for day-to-day development.
 - Our dev and ops folks have a 360 view on apps and infra, we use observability tooling everywhere.
 
-All checked off? Cool, we're ready.
+Checked all items off the list? Pinky promise? 
+
+Cool, you're ready …
+
+What's next?
 
 ### Good practices
 
-Some pointers to get you started:
+So, let's face it, there are [no best practices](https://www.forbes.com/sites/mikemyatt/2012/08/15/best-practices-arent/#6837047e407b), but over time the community documents and collects things that can maybe be called "good practice". As in: worked for me, in my setting but YMMV.
+
+Now, here are some pointers to good practice and/or collection of such, to get you started:
 
 1. Install:
   - [Kubernetes the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -65,5 +71,7 @@ Some pointers to get you started:
 ## Let's talk about Prometheus
 
 ## Let's talk about service meshes
+
+Make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) carefully
 
 ## Let's talk about serverless
