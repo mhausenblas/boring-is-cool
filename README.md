@@ -49,7 +49,12 @@ Checked all items off the list? Pinky promise?
 
 Cool, you're ready …
 
-What's next?
+So, what's next? Well, think about what kind of app you're doing. Is it a lift and shift of an existing app? Breaking down a monolith into a bunch of microservices? Are you writing a native app from scratch? Here are some rough guidelines and indicators for each case:
+
+- You have a _commercially available off-the-shelf_ (COTS) app such as WordPress, Rocket Chat or whatever and you want to run it on Kubernetes. The app itself is not "aware" it runs on Kubernetes and usually doesn't have to be. Kubernetes controls the app's life cycle, that is, find node to run, pull the container image, launch container(s), carry out health checks, mount volumes, etc, and that is that. You benefit from Kubernetes as a runtime environment and that's fine.
+- You write a bespoke app, something from scratch (with or without having had Kubernetes as the runtime environment in mind) or an existing monolith you carve up into microservice. You want to run it on Kubernetes. It's roughly the same modus operandi as in case of the COTS app above with a twist:
+  - 
+- The case of a _cloud native_ or _Kubernetes native_ application that is fully aware it is running on Kubernetes and leverages Kubernetes APIs and resources to some extent.
 
 ### Good practices
 
@@ -70,8 +75,20 @@ Now, here are some pointers to good practice and/or collection of such, to get y
 
 ## Let's talk about Prometheus
 
+It's simple. Install it, use it together with Grafana. Also, if you're looking for retaining your metrics in the long term, [there are options](https://github.com/mhausenblas/docs/blob/master/content/blog/2018-09-03-lts-options.md) (@@TODO: update dat link when blog post goes live).
+
 ## Let's talk about service meshes
 
-Make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) carefully
+A word on maturity: we're, at time of writing this in end of 2018, with service meshes where we were between 2015 and 2017 with container orchestrators. Remember to "container orchestration wars"? We had Swarm, Mesos/Marathon and then Kubernetes came along (honorable mention: Nomad, which I very much like, just a little late to the party). It became apparent for folks that it's prolly a good idea to use a container orchestrator but it was unclear which one to pick since there was no clear winner. So folks often ended up doing home-grown combos of bash scripts and using Puppet, Chef, or Ansible to orchestrate containers. Well, with end of 2017, Kubernetes established itself as the industry standard in this realm and the discussions are nowadays kinda moot.
+
+Again, we're early days concerning service meshes. But, if you have a non-trivial number of microservices (10? 20? 30?) and you find yourself rolling your own solution to manage observability, shape traffic, intra-service or intra-cluster mutual TLS, etc. then maybe, just maybe you're in the right place to consider a service mesh. Here are some options (in order of popularity/community size):
+
+- [Istio](https://istio.io/): the 500 pound gorilla. Everyone seems to do it and back it. Also, make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) it carefully. 
+- [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative, I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
+- [Consul Connect](https://www.hashicorp.com/blog/consul-1-2-service-mesh): can't say much since I haven't tried it but looks promising to me.
 
 ## Let's talk about serverless
+
+Where? In the public cloud such as AWS Lambda or Azure Functions or [on top of Kubernetes](https://go-talks.appspot.com/github.com/mhausenblas/2018-state-of-faas-on-kube/main.slide)?
+
+More to come …
