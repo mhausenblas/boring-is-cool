@@ -57,11 +57,11 @@ So, what's next? Well, think about what kind of app you're doing. Is it a lift a
   - Oh my, you have some microservices and not a single monolith now … how do you know where to look at when things are slow and/or break? Here, distributed tracing can help and while some [experts advocate](https://twitter.com/mattklein123/status/1049813546077323264) for being conservative rolling out tracing, I can't imagine how one would successfully do microservices (with or without containers) without tracing or something equivalent. It's like flying blind in a plane you've so far only known from the passenger cabin and you notice a warning saying that you're about to crash … and not even knowing where to look for the potential problem. Doesn't sound like a great place to be in.
 - The case of a _cloud native_ or _Kubernetes native_ application. That is, a an application that is "fully aware" it is running on Kubernetes and is designed to access the Kubernetes APIs and resources, at least to some extent. You don't have to go all the way to use things like the [Operator Framework](https://github.com/operator-framework), although that's also a nice goal, but you typically would leverage Kubernetes [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) and/or write a controller that queries or manipulate Kubernetes proper resources such as pods or services.
 
-### Good practices
+### Kubernetes good practices
 
 So, let's face it, there are [no best practices](https://www.forbes.com/sites/mikemyatt/2012/08/15/best-practices-arent/#6837047e407b), but over time the community documents and collects things that can maybe be called "good practice". As in: worked for me, in my setting but YMMV.
 
-Now, here are some pointers to good practice and/or collection of such, to get you started:
+Now, here are some pointers to good practices and/or collections of such, to get you started:
 
 1. Install:
   - [Kubernetes the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -91,6 +91,17 @@ Again, we're early days concerning service meshes. But, if you have a non-trivia
 - [Istio](https://istio.io/): the 500 pound gorilla. Everyone seems to do it and back it. Also, make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) it carefully. 
 - [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative, I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
 - [Consul Connect](https://www.hashicorp.com/blog/consul-1-2-service-mesh): can't say much since I haven't tried it but looks promising to me.
+
+### Service mesh good practices
+
+ Some pointers to good practices and/or collections of such, to get you started:
+
+- [The Service Mesh: Past, Present, and Future](https://kccncna17.sched.com/event/CU8M/the-service-mesh-past-present-and-future-b-william-morgan-buoyant)
+- [The Enterprise Path to Service Mesh Architectures](https://blog.gingergeek.com/2018/08/now-available-the-enterprise-path-to-service-mesh-architectures/)
+- [The Service Mesh](https://pages.buoyant.io/Oreilly-Service-Mesh-Book.html)
+- [Introducing Istio Service Mesh for Microservices](https://developers.redhat.com/books/introducing-istio-service-mesh-microservices/)
+
+
 
 ## Let's talk about serverless
 
