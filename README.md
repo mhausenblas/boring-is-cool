@@ -1,8 +1,8 @@
-Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate and cloud native [ambassador](https://www.cncf.io/people/ambassadors/). Here, I share some thoughts and considerations around using cloud native technologies, including Kubernetes, observability tools such as Prometheus, service meshes,  and serverless offerings.
+Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate and [cloud native ambassador](https://www.cncf.io/people/ambassadors/). Here, I share some thoughts and considerations around using cloud native technologies, including Kubernetes, observability tools such as Prometheus, service meshes,  and serverless offerings.
 
 1. [Why?](#why)
 1. [Kubernetes](#lets-talk-about-kubernetes)
-1. [Prometheus](#lets-talk-about-prometheus)
+1. [Observability](#lets-talk-about-observability)
 1. [Service meshes](#lets-talk-about-service-meshes)
 1. [Serverless](#lets-talk-about-serverless)
 
@@ -54,7 +54,7 @@ So, what's next? Well, think about what kind of app you're doing. Is it a lift a
 - You have a _commercially available off-the-shelf_ (COTS) app such as WordPress, Rocket Chat or whatever and you want to run it on Kubernetes. The app itself is not "aware" it runs on Kubernetes and usually doesn't have to be. Kubernetes controls the app's life cycle, that is, find node to run, pull the container image, launch container(s), carry out health checks, mount volumes, etc, and that is that. You benefit from Kubernetes as a runtime environment and that's fine.
 - You write a _bespoke app_, something from scratch (with or without having had Kubernetes as the runtime environment in mind) or an existing monolith you carve up into microservice. You want to run it on Kubernetes. It's roughly the same modus operandi as in the case of the COTS app above, but with a twist:
   - Now that you have a bunch of microservices, you can ship features faster. If and only if your organization allows it. Roll out a new service and you're done. Do A/B or canary testing, leverage fine-grained security via RBAC.
-  - Oh my, you have some microservices and not a single monolith now … how do you know where to look at when things are slow and/or break? Here, distributed tracing can help and while some [experts advocate](https://twitter.com/mattklein123/status/1049813546077323264) for being conservative rolling out tracing, I can't imagine how one would successfully do microservices (with or without containers) without tracing or something equivalent. It's like flying blind in a plane you've so far only known from the passenger cabin and you notice a warning saying that you're about to crash … and not even knowing where to look for the potential problem. Doesn't sound like a great place to be in.
+  - Oh my, you have some microservices and not a single monolith now … how do you know where to look at when things are slow and/or break? See the [tracing](#tracing) section for some answers.
 - The case of a _cloud native_ or _Kubernetes native_ application. That is, a an application that is "fully aware" it is running on Kubernetes and is designed to access the Kubernetes APIs and resources, at least to some extent. You don't have to go all the way to use things like the [Operator Framework](https://github.com/operator-framework), although that's also a nice goal, but you typically would leverage Kubernetes [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) and/or write a controller that queries or manipulate Kubernetes proper resources such as pods or services.
 
 ### Kubernetes good practices
@@ -74,22 +74,58 @@ Now, here are some pointers to good practices and/or collections of such, to get
   - [Stateful Apps](http://stateful.kubernetes.sh)
   - [Network](https://mhausenblas.info/cn-ref)
 
-## Let's talk about Prometheus
+## Let's talk about Observability
 
-It's simple. Install it, use it together with [Grafana](https://grafana.com/). Also, if you're looking for retaining your metrics in the long term, [there are options](https://github.com/mhausenblas/docs/blob/master/content/blog/2018-09-03-lts-options.md) (@@TODO: update dat link when blog post goes live).
+So [observability](https://medium.com/@copyconstruct/logs-and-metrics-6d34d3026e38), sometimes also called _o11y_, because: why not? :)
+
+I'll keep it simple and talk for now about the cloud native monitoring standard Prometheus and then continue with tracing. 
+
+### Prometheus
+
+It's simple. [Install it](https://prometheus.io/docs/prometheus/latest/getting_started/) and use it together with [Grafana](https://grafana.com/). Also, if you're looking for retaining your metrics in the long term, [there are options](https://github.com/mhausenblas/docs/blob/master/content/blog/2018-09-03-lts-options.md) (@@TODO: update dat link when blog post goes live).
+
+The PromQL query language is super powerful and actually not that hard to learn, here you see it in action (kudos to Robust Perception):
+
+![PromQL example](img/promql-example.png)
+
 
 Ah, one more thing in this context: keep an eye on the [OpenMetrics](https://openmetrics.io/) project. It's a relatively new CNCF project that has its roots in Prometheus and will enable interop in this space.
-
-### Prometheus good practices
 
 Some pointers to good practices and/or collections of such, to get you started:
 
 - Read the [Prometheus: Up & Running](http://shop.oreilly.com/product/0636920147343.do) book by Brian Brazil
 - Read the [Monitoring with Prometheus](https://www.prometheusbook.com/) book by James Turnbull
+- [Evolution of Monitoring and Prometheus](https://www.slideshare.net/brianbrazil/evolution-of-monitoring-and-prometheus-dublin-2018)
 - Try out PromQL in Robust Perception's [Prometheus demo installation](http://demo.robustperception.io:9090/graph)
 - Watch videos from [PromCon](https://promcon.io/):
   - [2017](https://www.youtube.com/playlist?list=PLoz-W_CUquUlnvoEBbqChb7A0ZEZsWSXt) conference
   - [2016](https://www.youtube.com/playlist?list=PLoz-W_CUquUlCq-Q0hy53TolAhaED9vmU) conference
+
+## Tracing
+
+You have a bunch of (containerized?) microservices that make up your app.
+Let's say that on any given request path you have a couple—maybe only 5 but maybe 20 or more—microservices involved in processing the request. How can you not only figure out which one of the many microservices on  the request path is broken (relatively straight forward) but which one is slow or busy?
+
+Here, distributed tracing can help developer or appops and while some [experts advocate](https://twitter.com/mattklein123/status/1049813546077323264) for being conservative rolling out tracing, I can't imagine how one would successfully do microservices without tracing or something equivalent. It's like flying blind in a plane you've so far only known from the passenger cabin and you notice a warning saying that you're about to crash … and not even knowing where to look for the potential problem. Doesn't sound like a great place to be in.
+
+The basic idea of (distributed) tracing is to—rather than trying to time-sync log entries across different nodes; good luck unless you can do [TrueTime](https://ai.google/research/pubs/pub45855)—assign each incoming request a unique idea that is passed through each microservice that touches the request, for example, using a HTTP headers. The tracing tool then can stitch together the traces by looking at each invocation and knowing which microservice did what. The result is something like this (produced using [Jaeger](https://www.jaegertracing.io/)):
+
+![Jaeger trace sample](img/jaeger-trace-example.png)
+
+As it is sometimes the case in cloud native land (erm, container engines) we have not one but two CNCF projects here at our disposal, with overlapping goals but different approaches:
+
+- [OpenCensus](https://opencensus.io/), which explains itself with being 'a vendor-agnostic single distribution of libraries to provide metrics collection and tracing for your services'.
+- [OpenTracing](https://opentracing.io/), which announces itself with the headline to offer 'vendor-neutral APIs and instrumentation for distributed tracing'.
+
+I'm not going to make a recommendation here, it's a loaded discussion, so pick which one you like or flip a coin.
+
+Some pointers to good practices and/or collections of such, to get you started:
+
+- [The life of a span](https://medium.com/jaegertracing/the-life-of-a-span-ee508410200b)
+- [Distributed Tracing with Jaeger & Prometheus on Kubernetes](https://blog.openshift.com/openshift-commons-briefing-82-distributed-tracing-with-jaeger-prometheus-on-kubernetes/)
+- Katacoda scenario on [Use OpenTracing with Golang and Hot R.O.D. demo](https://katacoda.com/opentracing/scenarios/golang-hotrod-demo)
+- [Debugging Microservices: How Google SREs Resolve Outages](https://www.infoq.com/presentations/google-debug-microservices)
+- [Debugging Microservices: Lessons from Google, Facebook, Lyft](https://thenewstack.io/debugging-microservices-lessons-from-google-facebook-lyft/)
 
 ## Let's talk about service meshes
 
