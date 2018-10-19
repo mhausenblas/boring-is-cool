@@ -76,7 +76,7 @@ Now, here are some pointers to good practices and/or collections of such, to get
 
 ## Let's talk about Prometheus
 
-It's simple. Install it, use it together with Grafana. Also, if you're looking for retaining your metrics in the long term, [there are options](https://github.com/mhausenblas/docs/blob/master/content/blog/2018-09-03-lts-options.md) (@@TODO: update dat link when blog post goes live).
+It's simple. Install it, use it together with [Grafana](https://grafana.com/). Also, if you're looking for retaining your metrics in the long term, [there are options](https://github.com/mhausenblas/docs/blob/master/content/blog/2018-09-03-lts-options.md) (@@TODO: update dat link when blog post goes live).
 
 Ah, one more thing in this context: keep an eye on the [OpenMetrics](https://openmetrics.io/) project. It's a relatively new CNCF project that has its roots in Prometheus and will enable interop in this space.
 
