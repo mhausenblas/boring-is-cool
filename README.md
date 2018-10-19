@@ -78,6 +78,15 @@ Now, here are some pointers to good practices and/or collections of such, to get
 
 It's simple. Install it, use it together with Grafana. Also, if you're looking for retaining your metrics in the long term, [there are options](https://github.com/mhausenblas/docs/blob/master/content/blog/2018-09-03-lts-options.md) (@@TODO: update dat link when blog post goes live).
 
+### Prometheus good practices
+
+Some pointers to good practices and/or collections of such, to get you started:
+
+- Read the [Prometheus: Up & Running](http://shop.oreilly.com/product/0636920147343.do) book by Brian Brazil
+- Read the [Monitoring with Prometheus](https://www.prometheusbook.com/) book by James Turnbull
+- Try out PromQL in Robust Perception's [Prometheus demo installation](http://demo.robustperception.io:9090/graph)
+- Watch videos from [PromCon](https://promcon.io/): [2017](https://www.youtube.com/playlist?list=PLoz-W_CUquUlnvoEBbqChb7A0ZEZsWSXt) | [2016](https://www.youtube.com/playlist?list=PLoz-W_CUquUlCq-Q0hy53TolAhaED9vmU)
+
 ## Let's talk about service meshes
 
 > There is nothing quite so useless, as doing with great efficiency, something that should not be done at all.” 
@@ -94,14 +103,12 @@ Again, we're early days concerning service meshes. But, if you have a non-trivia
 
 ### Service mesh good practices
 
- Some pointers to good practices and/or collections of such, to get you started:
+Some pointers to good practices and/or collections of such, to get you started:
 
 - [The Service Mesh: Past, Present, and Future](https://kccncna17.sched.com/event/CU8M/the-service-mesh-past-present-and-future-b-william-morgan-buoyant)
 - [The Enterprise Path to Service Mesh Architectures](https://blog.gingergeek.com/2018/08/now-available-the-enterprise-path-to-service-mesh-architectures/)
 - [The Service Mesh](https://pages.buoyant.io/Oreilly-Service-Mesh-Book.html)
 - [Introducing Istio Service Mesh for Microservices](https://developers.redhat.com/books/introducing-istio-service-mesh-microservices/)
-
-
 
 ## Let's talk about serverless
 
