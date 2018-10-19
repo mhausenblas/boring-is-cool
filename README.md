@@ -114,6 +114,16 @@ Some pointers to good practices and/or collections of such, to get you started:
 
 ## Let's talk about serverless
 
-Where? In the public cloud such as AWS Lambda or Azure Functions or [on top of Kubernetes](https://go-talks.appspot.com/github.com/mhausenblas/2018-state-of-faas-on-kube/main.slide)?
+So, yeah, serverless is the 'new' kewl kid in town. It's kinda not really useful to position serverless and containers against each other since that's comparing apples and oranges but nevertheless that's often the case nowadays. Let's not go there and focus on what it is and what you can do: serverless is an umbrella term for a class of technologies, focusing on the execution and business or billing model. You're only billed by actual invocation or usage rather than a certain time on a fixed basis. One of the most popular (or maybe it's the loudest of the kewl kids, who knows ;) serverless offerings is the so called Function-as-a-Service (FaaS). With AWS Lambda, Amazon has been trailblazing this area since 2014 and it is nowadays used in a range of event-driven [use cases](https://dashbird.io/blog/best-aws-lambda-serverless-use-cases/).
 
-More to come …
+Whenever someone says serverless, erm, FaaS I usually ask: Where? In the public cloud such as AWS Lambda or Azure Functions or [on top of Kubernetes](https://go-talks.appspot.com/github.com/mhausenblas/2018-state-of-faas-on-kube/main.slide)? Also, one should not underestimate the fact that there are certain [challenges](https://hackernoon.com/serverless-whos-on-call-now-81193fbfe9d7) that come along with it (though, in all fairness, some do overlap with containers).
+
+I've been active in serverless land for a couple of years now and recently asked myself how does the same app look as [a monolith, as a containerized microservice app, and using FaaS](https://speakerdeck.com/mhausenblas/three-billy-goats-gruff-from-a-monolith-to-containers-to-functions).
+
+### Serverless good practices
+
+Some pointers to good practices and/or collections of such, to get you started:
+
+- O’Reilly has a great collection of resources here with [Learn about serverless with these books, videos, and tutorials](https://www.oreilly.com/ideas/learn-about-serverless-with-these-books-videos-and-tutorials)
+- Read from and listen to Mr [Paul Johnston](https://medium.com/@PaulDJohnston) 
+- Attend one of the dozens [Serverless conferences](http://serverlessconf.io/) around the world
