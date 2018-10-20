@@ -5,6 +5,7 @@ Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate 
 1. [Observability](#lets-talk-about-observability)
 1. [Service meshes](#lets-talk-about-service-meshes)
 1. [Serverless](#lets-talk-about-serverless)
+1. [Security](#security)
 
 ----
 
@@ -169,3 +170,11 @@ Some pointers to good practices and/or collections of such, to get you started:
 - O’Reilly has a great collection of resources here with [Learn about serverless with these books, videos, and tutorials](https://www.oreilly.com/ideas/learn-about-serverless-with-these-books-videos-and-tutorials)
 - Read from and listen to Mr [Paul Johnston](https://medium.com/@PaulDJohnston) 
 - Attend one of the dozens [Serverless conferences](http://serverlessconf.io/) around the world
+
+## Let's talk about security
+
+Oh boy. So, I'm currently reading [Bruce Schneier: "Click Here to Kill Everybody"](https://www.youtube.com/watch?v=GkJCI3_jbtg) and while it's not that bad in cloud native land, I think, we certainly still have a lot in front of.
+
+In the context of Kubernetes, Liz Rice and I have collected and documented relevant security resources at [kubernetes-security.info](https://kubernetes-security.info/) and there's also a short book for your to download.
+
+For serverless/FaaS, I'd suggest you check out Yan Cui's excellent post [Many-faced threats to Serverless security](https://hackernoon.com/many-faced-threats-to-serverless-security-519e94d19dba) and maybe have a look at this very informative Black Hack 2017 talk on [Hacking Serverless Runtimes: Profiling AWS Lambda Azure Functions & More](https://www.youtube.com/watch?v=GZBiz-0t5KA) with a slide deck [here](https://www.blackhat.com/docs/us-17/wednesday/us-17-Krug-Hacking-Severless-Runtimes.pdf).
