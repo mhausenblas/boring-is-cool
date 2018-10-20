@@ -130,7 +130,7 @@ Some pointers to good practices and/or collections of such, to get you started:
 
 ## Let's talk about service meshes
 
-> There is nothing quite so useless, as doing with great efficiency, something that should not be done at all.” 
+> "There is nothing quite so useless, as doing with great efficiency, something that should not be done at all." 
 
 &mdash;&mdash; [Peter Drucker](https://www.goodreads.com/author/quotes/12008.Peter_F_Drucker)
 
