@@ -188,4 +188,4 @@ For serverless/FaaS, I'd suggest you check out Yan Cui's excellent post [Many-fa
 
 ----
 
-[Michael Hausenblas](https://twitter.com/mhausenblas), October 2018
+© [Michael Hausenblas](https://twitter.com/mhausenblas), October 2018 
