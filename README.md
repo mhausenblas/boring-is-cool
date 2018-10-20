@@ -5,7 +5,7 @@ Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate 
 1. [Observability](#lets-talk-about-observability)
 1. [Service meshes](#lets-talk-about-service-meshes)
 1. [Serverless](#lets-talk-about-serverless)
-1. [Security](#security)
+1. [Security](#lets-talk-about-security)
 
 ----
 
