@@ -61,3 +61,9 @@ code.highlighter-rouge {
     color: #c48806;
     border-radius: 2px;
 }
+
+img {
+    -webkit-box-shadow: 0px 0px 45px 6px rgba(240, 240, 240, 0.71);
+    -moz-box-shadow: 0px 0px 45px 6px rgba(240, 240, 240, 0.71);
+    box-shadow: 0px 0px 45px 6px rgba(240, 240, 240, 0.71);
+}
