@@ -109,14 +109,14 @@ Let's say that on any given request path you have a couple—maybe only 5 but ma
 
 Here, distributed tracing can help developer or appops and while some [experts advocate](https://twitter.com/mattklein123/status/1049813546077323264) for being conservative rolling out tracing, I can't imagine how one would successfully do microservices without tracing or something equivalent. It's like flying blind in a plane you've so far only known from the passenger cabin and you notice a warning saying that you're about to crash … and not even knowing where to look for the potential problem. Doesn't sound like a great place to be in.
 
-Rather than trying to time-sync log entries across different nodes—good luck unless you can do [TrueTime](https://ai.google/research/pubs/pub45855)—the idea of (distributed) tracing is to assign each incoming request a unique ID (UID). This UID is passed through by each microservice touching the request, for example, using HTTP headers. The tracing tool then can stitch together the traces by looking at each invocation and knowing which microservice did what. The result is something like this (produced using [Jaeger](https://www.jaegertracing.io/)):
+Rather than trying to time-sync log entries across different nodes—good luck unless you can do [TrueTime](https://ai.google/research/pubs/pub45855)—the idea of (distributed) tracing is to assign each incoming request a unique ID (UID). This UID is passed through by each microservice touching the request, for example, using HTTP headers. The tracing tool then can stitch together the traces by looking at each invocation and knowing which microservice did what. The result is something like this (produced using the Jaeger tracing tool):
 
 ![Jaeger trace sample](img/jaeger-trace-example.png)
 
 As it is sometimes the case in cloud native land (erm, container engines) we have not one but two CNCF projects here at our disposal, with overlapping goals but different approaches:
 
-- [OpenCensus](https://opencensus.io/), which explains itself with being 'a vendor-agnostic single distribution of libraries to provide metrics collection and tracing for your services'.
-- [OpenTracing](https://opentracing.io/), which announces itself with the headline to offer 'vendor-neutral APIs and instrumentation for distributed tracing'.
+- [OpenCensus](https://opencensus.io/), which explains itself with being 'a vendor-agnostic single distribution of libraries to provide metrics collection and tracing for your services'. Tooling (in alphabetical order): Exporters for [Go, Java, Node.js, and Python](https://opencensus.io/guides/exporters/), [Go kit](https://opencensus.io/guides/integrations/go_kit/), [Google Stackdriver](https://opencensus.io/guides/integrations/google_cloud/), [MongoDB](https://opencensus.io/guides/integrations/mongodb/), [Redis](https://opencensus.io/guides/integrations/redis/) clients, and others.
+- [OpenTracing](https://opentracing.io/), which announces itself with the headline to offer 'vendor-neutral APIs and instrumentation for distributed tracing'. Tooling (in alphabetical order): [Datadog](https://www.datadoghq.com/blog/opentracing-datadog-cncf/), [Instana](https://www.instana.com/), [LightStep](https://lightstep.com/), [Jaeger](https://www.jaegertracing.io/), [Zipkin](https://zipkin.io/) and others. 
 
 I'm not going to make a recommendation here, it's a loaded discussion, so pick which one you like or flip a coin.
 
