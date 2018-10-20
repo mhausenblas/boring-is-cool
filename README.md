@@ -124,7 +124,7 @@ Some pointers to good practices and/or collections of such, to get you started:
 
 - [The life of a span](https://medium.com/jaegertracing/the-life-of-a-span-ee508410200b)
 - [Distributed Tracing with Jaeger & Prometheus on Kubernetes](https://blog.openshift.com/openshift-commons-briefing-82-distributed-tracing-with-jaeger-prometheus-on-kubernetes/)
-- Katacoda scenario on [Use OpenTracing with Golang and Hot R.O.D. demo](https://katacoda.com/opentracing/scenarios/golang-hotrod-demo)
+- [Use OpenTracing with Golang and Hot R.O.D. demo](https://katacoda.com/opentracing/scenarios/golang-hotrod-demo) Katacoda scenario
 - [Debugging Microservices: How Google SREs Resolve Outages](https://www.infoq.com/presentations/google-debug-microservices)
 - [Debugging Microservices: Lessons from Google, Facebook, Lyft](https://thenewstack.io/debugging-microservices-lessons-from-google-facebook-lyft/)
 
@@ -162,6 +162,8 @@ Whenever someone says serverless, erm, FaaS then I usually ask: _Where?_
 In the public cloud such as AWS Lambda or Azure Functions or [on top of Kubernetes](https://go-talks.appspot.com/github.com/mhausenblas/2018-state-of-faas-on-kube/main.slide)? Also, one should not underestimate the fact that there are certain [challenges](https://hackernoon.com/serverless-whos-on-call-now-81193fbfe9d7) that come along with it; though, in all fairness, some do overlap with containers.
 
 I've been active in serverless land for a couple of years now and recently asked myself how does the same app look as [a monolith, as a containerized microservice app, and using FaaS](https://speakerdeck.com/mhausenblas/three-billy-goats-gruff-from-a-monolith-to-containers-to-functions).
+
+The last year or so brought a lot of changes: the CNCF [Serverless Working Group](https://github.com/cncf/wg-serverless) has been super active, for example around [CloudEvents](https://cloudevents.io/), and then of course Google took everyone by surprise in launching knative—check out the [serving](https://github.com/knative/serving) and [eventing](https://github.com/knative/eventing) bits especially. I get the feeling currently many (open source) projects are re-platforming on `knative`—in the context of OpenWhisk I can say this for sure to be the case—and it will be interesting to see if there will ever be a real alternative to the [serverless framework](https://serverless.com/).
 
 ### Serverless good practices
 
