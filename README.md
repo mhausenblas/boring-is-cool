@@ -173,7 +173,7 @@ Some pointers to good practices and/or collections of such, to get you started:
 
 ## Let's talk about security
 
-Oh boy. So, I'm currently reading [Bruce Schneier: "Click Here to Kill Everybody"](https://www.youtube.com/watch?v=GkJCI3_jbtg) and while it's not that bad in cloud native land, I think, we certainly still have a lot in front of.
+Oh boy. So, I'm currently reading [Bruce Schneier: "Click Here to Kill Everybody"](https://www.youtube.com/watch?v=GkJCI3_jbtg) and while it's not that bad in cloud native land, I think, we certainly still have a lot of work in front of us.
 
 In the context of Kubernetes, Liz Rice and I have collected and documented relevant security resources at [kubernetes-security.info](https://kubernetes-security.info/) and there's also a short book for your to download.
 
