@@ -142,6 +142,10 @@ Again, we're early days concerning service meshes. But, if you have a non-trivia
 - [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative, I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
 - [Consul Connect](https://www.hashicorp.com/blog/consul-1-2-service-mesh): can't say much since I haven't tried it but looks promising to me.
 
+Here I show you Linkerd 2.0 in action:
+
+![Linkerd 2.0 example](img/linkerd2-example.png)
+
 ### Service mesh good practices
 
 Some pointers to good practices and/or collections of such, to get you started:
