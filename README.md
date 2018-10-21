@@ -97,6 +97,7 @@ Some pointers to good practices and/or collections of such, to get you started:
 - Read the [Prometheus: Up & Running](http://shop.oreilly.com/product/0636920147343.do) book by Brian Brazil
 - Read the [Monitoring with Prometheus](https://www.prometheusbook.com/) book by James Turnbull
 - [Evolution of Monitoring and Prometheus](https://www.slideshare.net/brianbrazil/evolution-of-monitoring-and-prometheus-dublin-2018)
+- [4 open source monitoring tools](https://opensource.com/article/18/8/open-source-monitoring-tools)
 - Try out PromQL in Robust Perception's [Prometheus demo installation](http://demo.robustperception.io:9090/graph)
 - Watch videos from [PromCon](https://promcon.io/):
   - [2017](https://www.youtube.com/playlist?list=PLoz-W_CUquUlnvoEBbqChb7A0ZEZsWSXt) conference
