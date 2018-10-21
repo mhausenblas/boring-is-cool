@@ -123,6 +123,7 @@ I'm not going to make a recommendation here, it's a loaded discussion, so pick w
 Some pointers to good practices and/or collections of such, to get you started:
 
 - [The life of a span](https://medium.com/jaegertracing/the-life-of-a-span-ee508410200b)
+- [3 open source distributed tracing tools](https://opensource.com/article/18/9/distributed-tracing-tools)
 - [Distributed Tracing with Jaeger & Prometheus on Kubernetes](https://blog.openshift.com/openshift-commons-briefing-82-distributed-tracing-with-jaeger-prometheus-on-kubernetes/)
 - [Use OpenTracing with Golang and Hot R.O.D. demo](https://katacoda.com/opentracing/scenarios/golang-hotrod-demo) Katacoda scenario
 - [Debugging Microservices: How Google SREs Resolve Outages](https://www.infoq.com/presentations/google-debug-microservices)
