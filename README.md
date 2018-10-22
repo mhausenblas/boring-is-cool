@@ -165,7 +165,7 @@ One of the most popularâ€”or maybe it's the loudest of the kewl kids, who knowsâ
 
 Whenever someone says serverless, erm, FaaS then I usually ask: _Where?_ 
 
-In the public cloud such as AWS Lambda or Azure Functions or [on top of Kubernetes](https://go-talks.appspot.com/github.com/mhausenblas/2018-state-of-faas-on-kube/main.slide)? Also, one should not underestimate the fact that there are certain [challenges](https://hackernoon.com/serverless-whos-on-call-now-81193fbfe9d7) that come along with it; though, in all fairness, some do overlap with containers.
+In the public cloud such as AWS Lambda or Azure Functions or [on top of Kubernetes](https://go-talks.appspot.com/github.com/mhausenblas/2018-state-of-faas-on-kube/main.slide)? Also, one should not underestimate the fact that there are [certain](https://jaxenter.com/how-serverless-trouble-teams-150705.html) [challenges](https://hackernoon.com/serverless-whos-on-call-now-81193fbfe9d7) that come along with it; though, in all fairness, some do overlap with containers.
 
 I've been active in serverless land for a couple of years now and recently asked myself how does the same app look as [a monolith, as a containerized microservice app, and using FaaS](https://speakerdeck.com/mhausenblas/three-billy-goats-gruff-from-a-monolith-to-containers-to-functions).
 
