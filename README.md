@@ -6,6 +6,7 @@ Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate 
 1. [Service meshes](#lets-talk-about-service-meshes)
 1. [Serverless](#lets-talk-about-serverless)
 1. [Security](#lets-talk-about-security)
+1. [Developing](#lets-talk-about-developing)
 
 ----
 
@@ -67,10 +68,6 @@ Now, here are some pointers to good practices and/or collections of such, to get
 1. Install:
   - [Kubernetes the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
   - [Managing Kubernetes](http://shop.oreilly.com/product/0636920146667.do)
-1. Development:
-  - [Developing on Kubernetes](https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/)
-  - [Apps life cycle](http://shop.oreilly.com/product/0636920175131.do)
-  - [Troubleshooting apps](http://troubleshooting.kubernetes.sh)
 1. Functional areas: 
   - [Stateful Apps](http://stateful.kubernetes.sh)
   - [Network](https://mhausenblas.info/cn-ref)
@@ -187,6 +184,49 @@ In the context of Kubernetes, Liz Rice and I have collected and documented relev
 
 For serverless/FaaS, I'd suggest you check out Yan Cui's excellent post [Many-faced threats to Serverless security](https://hackernoon.com/many-faced-threats-to-serverless-security-519e94d19dba) and maybe have a look at this very informative Black Hack 2017 talk on [Hacking Serverless Runtimes: Profiling AWS Lambda Azure Functions & More](https://www.youtube.com/watch?v=GZBiz-0t5KA) with a slide deck [here](https://www.blackhat.com/docs/us-17/wednesday/us-17-Krug-Hacking-Severless-Runtimes.pdf).
 
+## Let's talk about developing
+
+_This section is heavy WIP_
+
+Now, from a developer perspective, cloud native could involve a range of things depending on what environment you're in. From container-based (Kubernetes) environments to serverless/FaaS environments.
+
+In case of Kubernetes one full end-to-end iteration, from code change to running app consists of the following phases:
+
+1. You first need to build a container image (locally or remote, e.g., via CI/CD pipeline), and
+1. then need to push the container image into a container registry. 
+1. Via the [CRI](https://kubernetes.io/docs/setup/cri/) standard, the `kubelet` instructs the container runtime to pull the container image from the registry, and 
+1. then launches a new pod with the updated container image.
+
+How to short-cut this full cycle? The approaches can roughly be categorized as follows:
+
+ - local builds, for example, using the [container engine in Minikube](https://abhishek-tiwari.com/local-development-environment-for-kubernetes-using-minikube/)
+ - sync-based by replacing binary in running container such as [ksync](https://vapor-ware.github.io/ksync/)
+ - proxy-based such as [Telepresence](https://www.telepresence.io/)
+
+Interesting cloud native online prototyping, testing, and development environments:
+
+- AWS [Cloud9](https://aws.amazon.com/cloud9/)
+- [Eclipse Che](https://www.eclipse.org/che/)
+- [GitPod](https://www.gitpod.io)
+- [Katacoda](https://katacoda.com/)
+
+Interesting online shell environments:
+
+- [Azure Cloud Shell](https://azure.microsoft.com/en-us/features/cloud-shell/)
+- [Google Cloud Shell](https://cloud.google.com/shell/docs/)
+
+Debugger and troubleshooting tools:
+
+- [KubeSquash](https://github.com/solo-io/kubesquash)
+
+### Developing good practices
+
+- [Developing on Kubernetes](https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/)
+- [Apps life cycle](http://shop.oreilly.com/product/0636920175131.do)
+- [Troubleshooting apps](http://troubleshooting.kubernetes.sh)
+- [Development and Debugging with Kubernetes](https://itnext.io/development-and-debugging-with-kubernetes-296bb60d9549)
+- [Debug a Go Application in Kubernetes from IDE](https://itnext.io/debug-a-go-application-in-kubernetes-from-ide-c45ad26d8785)
+- [Troubleshooting Java applications on OpenShift](https://developers.redhat.com/blog/2017/08/16/troubleshooting-java-applications-on-openshift/)
 
 ----
 
