@@ -188,9 +188,13 @@ For serverless/FaaS, I'd suggest you check out Yan Cui's excellent post [Many-fa
 
 _This section is heavy WIP_
 
-Now, from a developer perspective, cloud native could involve a range of things depending on what environment you're in. From container-based (Kubernetes) environments to serverless/FaaS environments.
+Now, from a developer perspective, cloud native could involve a range of things depending on what environment you're in: from Kubernetes (container-based) environments to serverless (FaaS) environments.
 
-In case of Kubernetes one full end-to-end iteration, from code change to running app consists of the following phases:
+### Developing on Kubernetes
+
+In the case of developing an app that's supposed to run on Kubernetes on needs to create a container image with the app (for example, as a jar file, binary, script) that must be placed into a container registry for Kubernetes to launch the application container. 
+
+So one end-to-end iteration, from code change to running the app consists of the following phases:
 
 1. You first need to build a container image (locally or remote, e.g., via CI/CD pipeline), and
 1. then need to push the container image into a container registry. 
@@ -219,7 +223,7 @@ Debugger and troubleshooting tools:
 
 - [KubeSquash](https://github.com/solo-io/kubesquash)
 
-### Developing good practices
+### Developing on Kubernetes good practices
 
 - [Developing on Kubernetes](https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/)
 - [Apps life cycle](http://shop.oreilly.com/product/0636920175131.do)
