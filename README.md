@@ -225,6 +225,20 @@ Debugger and troubleshooting tools:
 
 ### Developing on Kubernetes good practices
 
+There are a number of things you can do in the design phase, on an architectural level:
+
+- Know the Kubernetes primitives (aka core resources such as pods, services, deployments, etc.) and know how to use them and when not to use them and define custom resources.
+- Avoid strong coupling and hard-coded (start-up) dependencies, rather, implement retries and timeouts when communicating. Bonus points: out-source these communication patterns to a [service mesh](#lets-talk-about-service-meshes).
+- Network bound services should listen on `0.0.0.0` (that is, any local address) and not `127.0.0.1` (that is NOT the loopback address).
+
+Then once you started coding:
+
+- Apply [chaos engineering](https://www.gremlin.com/chaos-monkey/).
+- Make sure devs and ops have a [20/20 vision](#lets-talk-about-observability).
+- Automate all the things (CI/CD, scanning, deployments, perf tests, A/B tests, etc.).
+
+Further pointers to good practices and/or collections of such, to get you started:
+
 - [Developing on Kubernetes](https://kubernetes.io/blog/2018/05/01/developing-on-kubernetes/)
 - [Apps life cycle](http://shop.oreilly.com/product/0636920175131.do)
 - [Troubleshooting apps](http://troubleshooting.kubernetes.sh)
