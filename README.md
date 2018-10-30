@@ -156,7 +156,7 @@ Some pointers to good practices and/or collections of such, to get you started:
 
 ## Let's talk about serverless
 
-So, yeah, serverless is the 'new' kewl kid in town. It's kinda not really useful to position serverless and containers against each other since that's comparing apples and oranges but nevertheless that's often the case nowadays. Let's not go there and focus on what it is and what you can do: serverless is an umbrella term for a class of technologies, focusing on the execution and business or billing model. You're only billed by actual invocation or usage rather than a certain time on a fixed basis.
+So, yeah, [serverless](https://winterwindsoftware.com/serverless-definitions/) is the 'new' kewl kid in town. It's kinda not really useful to position serverless and containers against each other since that's comparing apples and oranges but nevertheless that's often the case nowadays. Let's not go there and focus on what it is and what you can do: serverless is an umbrella term for a class of technologies, focusing on the execution and business or billing model. You're only billed by actual invocation or usage rather than a certain time on a fixed basis.
 
 One of the most popular—or maybe it's the loudest of the kewl kids, who knows—serverless offerings is the so called Function-as-a-Service (FaaS). With AWS Lambda, Amazon has been trailblazing this area since 2014 and it is nowadays used in a range of event-driven [use cases](https://dashbird.io/blog/best-aws-lambda-serverless-use-cases/).
 
