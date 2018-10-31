@@ -63,10 +63,19 @@ So, what's next? Well, think about what kind of app you're doing. Is it a lift a
 
 So, let's face it, there are [no best practices](https://www.forbes.com/sites/mikemyatt/2012/08/15/best-practices-arent/#6837047e407b), but over time the community documents and collects things that can maybe be called "good practice". As in: worked for me, in my setting but YMMV.
 
-Now, here are some pointers to good practices and/or collections of such, to get you started:
+Turns out it pays off to study the [Kubernetes architecture](https://speakerdeck.com/luxas/kubernetes-architecture-fundamentals) first in-depth to get a good idea of the APIs and the interaction of the components as well as the standardized interfaces for networking (CNI), container runtime (CRI), and storage (CSI):  
 
-1. Install:
-  - [Kubernetes the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
+![Kubernetes high-level architecture](img/k8s-arch.png)
+
+Here are some more pointers to good practices and/or collections of such, to get you started:
+
+1. Overview and intro:
+  - [Kubernetes Architecture Fundamentals](https://speakerdeck.com/luxas/kubernetes-architecture-fundamentals)
+  - [Kubernetes in Action](https://www.manning.com/books/kubernetes-in-action)
+  - [Kubernetes: Up and Running](http://shop.oreilly.com/product/0636920043874.do)
+1. Install and day 2 ops:
+  - [Kubernetes the hard way](https://github.com/kelseyhightower/kubernetes-the-hard-way) 
+  - [Cloud Native DevOps with Kubernetes](http://shop.oreilly.com/product/0636920175131.do)
   - [Managing Kubernetes](http://shop.oreilly.com/product/0636920146667.do)
 1. Functional areas: 
   - [Stateful Apps](http://stateful.kubernetes.sh)
@@ -85,7 +94,6 @@ It's simple. [Install it](https://prometheus.io/docs/prometheus/latest/getting_s
 The PromQL query language is super powerful and actually not that hard to learn, here you see it in action (kudos to Robust Perception):
 
 ![PromQL example](img/promql-example.png)
-
 
 Ah, one more thing in this context: keep an eye on the [OpenMetrics](https://openmetrics.io/) project. It's a relatively new CNCF project that has its roots in Prometheus and will enable interop in this space.
 
