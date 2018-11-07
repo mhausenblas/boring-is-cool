@@ -28,6 +28,11 @@ I've got good news and not so good news for you. Yes, it's totally feasible, but
 
 Let me walk you through it …
 
+Before we jump into the how, let's have a high-level view on a cloud native stack based on Kubernetes, which might look something like the following:
+
+![Kubernetes-based cloud native stack](img/cloud-native-stack.png)
+
+
 ### Begin at the beginning
 
 > "Begin at the beginning," the King said, very gravely, "and go on till you come to the end: then stop.”
