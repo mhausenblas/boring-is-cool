@@ -32,6 +32,8 @@ Before we jump into the how, let's have a high-level view on a cloud native stac
 
 ![Kubernetes-based cloud native stack](img/cloud-native-stack.png)
 
+The basis of the Kubernetes-based cloud native stack is unsurprisingly Kubernetes. On top of that you'll find a collection of tools and components collectively labelled as "day 2 operations", from service meshes (for intra-cluster service-level traffic management and insights) to operators, managing the application life cycle (install, upgrades, maintenance, etc.). I've split the workloads into two parts: lower-level (abstractions or building blocks) such as Knative, registries such as Quay.io, or [OPA](https://www.openpolicyagent.org/). The workloads you actually care about, the ones you interact with directly, such as a long running service exposing a HTTP or gRPC interface or an event-driven function invocation via FaaS, are in the upper level. 
+
 
 ### Begin at the beginning
 
