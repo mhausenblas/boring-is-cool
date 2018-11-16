@@ -30,7 +30,7 @@ many features and fixing many bugs. So, in this context it's more than understan
 It's just too expensive, both time-wise and money-wise. 
 
 The first time you hear people [reporting](https://medium.com/netflix-techblog/how-we-build-code-at-netflix-c5d9bd727f15) that they're 
-releasing a new versions of their app [many](https://code.fb.com/web/rapid-release-at-massive-scale/) [times](https://www.netsolutions.com/insights/why-do-great-product-companies-release-software-to-production-multiple-times-a-day/) every day
+releasing a new version of their app [many](https://code.fb.com/web/rapid-release-at-massive-scale/) [times](https://www.netsolutions.com/insights/why-do-great-product-companies-release-software-to-production-multiple-times-a-day/) every day
 or maybe even [a couple of times per hour](https://news.ycombinator.com/item?id=2971521) you might go like: woah, that's some crazy talking there.
 But bear with me for a moment. Don't compare that kind of releases with your monolith-once-per-year release. They are fundamentally different in
 a number of ways:
@@ -41,14 +41,14 @@ a number of ways:
 - Even if the, say, one new feature of the current release number 42 of today is broken, not much harm is done since the next release is only a few hours away and with that you get the chance to either fix it or roll it back.
 - Last but not least—especially true for native Web apps—every time you reload the page you may end up using a new version of the app. The app may consist of many (hundreds of?) microservices.
 
-This idea of 'small batches' was, to my knowledge, first popularized by the 2013 book [The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win](https://itrevolution.com/book/the-phoenix-project/), 
+This idea of 'small batches' was, to my knowledge, first popularized by the 2013 book [The Phoenix Project](https://itrevolution.com/book/the-phoenix-project/), 
 although the idea existed already for quite some time. For example, I remember reading Michael Nygard's [Release It!](https://pragprog.com/book/mnee/release-it) from 2007 where he essentially argued the same principles. 
 I'm pretty certain that in a number of forward-looking organizations and communities, the small batches paradigm, that is, releasing early (to get direct end-user feedback) and release often (to establish fast feedback cycles) has
 been practiced for more than 20 years. I suppose the point I'm trying to make: at time of writing, in 2018,  we're now in a good place where we can resort to a wealth of good practices from practitioners across different verticals and domains.
 
-Some of the good practices (such as zero-downtime deployments or A/B testing) and abstractions (for example, load-balancers or the retry and time-out pattern) that so far existed mainly in more informal shapes, including tribal knowledge, 
+Some of the good practices (such as zero-downtime deployments or A/B testing) and abstractions (for example, load-balancers or the retry and timeout pattern) that so far existed mainly in more informal shapes, including tribal knowledge, 
 blog posts and books have now been, quite literally, encoded in software. 
-You might have guessed it already, this piece of software I'm talking about here, that takes the lessons learned of running (containerized) microservices (at scale) and provides it to you in a free and open source format is indeed Kubernetes.
+You might have guessed it already, this piece of software I'm talking about here, that takes the lessons learned of running containerized microservices (at scale) and provides it to you in a free and open source format is, indeed, Kubernetes.
 
 ## Let's talk about Kubernetes
 
