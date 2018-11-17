@@ -100,7 +100,7 @@ So, what's next? Well, think about what kind of app you're doing. Is it a lift a
 
 So, let's face it, there are [no best practices](https://www.forbes.com/sites/mikemyatt/2012/08/15/best-practices-arent/#6837047e407b), but over time the community documents and collects things that can maybe be called "good practice". As in: worked for me, in my setting but YMMV.
 
-Turns out it pays off to study the [Kubernetes architecture](https://speakerdeck.com/luxas/kubernetes-architecture-fundamentals) first in-depth to get a good idea of the APIs and the interaction of the components as well as the standardized interfaces for networking (CNI), container runtime (CRI), and storage (CSI):  
+Turns out it pays off to study the [Kubernetes architecture](https://speakerdeck.com/luxas/kubernetes-architecture-fundamentals) first in-depth to get a good idea of the APIs and the interaction of the components as well as the standardized interfaces for networking ([CNI](github.com/containernetworking/cni)), container runtime ([OCI](https://github.com/opencontainers) and [CRI](https://github.com/kubernetes/community/blob/master/contributors/devel/container-runtime-interface.md)), and storage ([CSI](https://github.com/kubernetes-csi)):  
 
 ![Kubernetes high-level architecture](img/k8s-arch.png)
 
