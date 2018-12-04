@@ -180,11 +180,13 @@ Some pointers to good practices and/or collections of such, to get you started:
 
 A word on maturity: we're, at time of writing this in end of 2018, with service meshes where we were between 2015 and 2017 with container orchestrators. Remember the "container orchestration wars"? We had Swarm, Mesos/Marathon and then Kubernetes came along (honorable mention: Nomad, which I very much like, just a little late to the party). It became apparent for folks that it's prolly a good idea to use a container orchestrator but it was unclear which one to pick since there was no clear winner. So folks often ended up doing home-grown combos of bash scripts and using Puppet, Chef, or Ansible to orchestrate containers. Well, with end of 2017, Kubernetes established itself as the industry standard in this realm and the discussions are nowadays kinda moot.
 
-Again, we're early days concerning service meshes. But, if you have a non-trivial number of microservices (10? 20? 30?) and you find yourself rolling your own solution to manage observability, shape traffic, intra-service or intra-cluster mutual TLS, etc. then maybe, just maybe you're in the right place to consider a service mesh. Here are some options (in order of popularity/community size):
+Again, we're early days concerning service meshes. But, if you have a non-trivial number of microservices (10? 20? 30?) and you find yourself rolling your own solution to manage observability, shape traffic, intra-service or intra-cluster mutual TLS, etc. then maybe, just maybe you're in the right place to consider a service mesh. Here are some options:
 
 - [Istio](https://istio.io/): the 500 pound gorilla. Everyone seems to do it and back it. Also, make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) it carefully. 
 - [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative, I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
 - [Consul Connect](https://www.hashicorp.com/blog/consul-1-2-service-mesh): can't say much since I haven't tried it but looks promising to me.
+- [AWS App Mesh](https://aws.amazon.com/app-mesh/): an Amazon-specific mesh using Envoy as its data plane and comes with a fully managed control plane, can be used in with Fargate, ECS, EKS, and also self-managed Kubernetes on EC2.
+- [SuperGloo](https://supergloo.solo.io/): meta-mesh to run multiple service meshes.
 
 Here I show you Linkerd 2.0 in action:
 
@@ -234,8 +236,6 @@ In the context of Kubernetes, Liz Rice and I have collected and documented relev
 For serverless/FaaS, I'd suggest you check out Yan Cui's excellent post [Many-faced threats to Serverless security](https://hackernoon.com/many-faced-threats-to-serverless-security-519e94d19dba) and maybe have a look at this very informative Black Hack 2017 talk on [Hacking Serverless Runtimes: Profiling AWS Lambda Azure Functions & More](https://www.youtube.com/watch?v=GZBiz-0t5KA) with a slide deck [here](https://www.blackhat.com/docs/us-17/wednesday/us-17-Krug-Hacking-Severless-Runtimes.pdf).
 
 ## Let's talk about developing
-
-_This section is WIP_
 
 From a developer perspective, cloud native could involve a range of things depending on what environment you're in: from Kubernetes (container-based) environments to serverless (FaaS) environments.
 
