@@ -182,10 +182,10 @@ A word on maturity: we're, at time of writing this in end of 2018, with service 
 
 Again, we're early days concerning service meshes. But, if you have a non-trivial number of microservices (10? 20? 30?) and you find yourself rolling your own solution to manage observability, shape traffic, intra-service or intra-cluster mutual TLS, etc. then maybe, just maybe you're in the right place to consider a service mesh. Here are some options:
 
-- [Istio](https://istio.io/): the 500 pound gorilla. Everyone seems to do it and back it. Also, make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) it carefully. 
-- [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative, I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
+- [Istio](https://istio.io/): the 500 pound gorilla with lots of industry buy-in (IBM, Google, Red Hat). Uses Envoy as the data plane and offers a range of features, from traffic control to observability to failure injection to mTLS. Also, make sure to [evaluate](https://tech.bigbasket.com/bigbaskets-experience-with-istio/) it carefully. 
+- [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative to Istio with a focus on developers. I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
 - [Consul Connect](https://www.hashicorp.com/blog/consul-1-2-service-mesh): can't say much since I haven't tried it but looks promising to me.
-- [AWS App Mesh](https://aws.amazon.com/app-mesh/): an Amazon-specific mesh using Envoy as its data plane and comes with a fully managed control plane, can be used in with Fargate, ECS, EKS, and also self-managed Kubernetes on EC2.
+- [AWS App Mesh](https://aws.amazon.com/app-mesh/): an Amazon-specific mesh using Envoy as its data plane and comes with a fully managed control plane, can be used  with Fargate, ECS, EKS, and also self-managed Kubernetes on EC2.
 - [SuperGloo](https://supergloo.solo.io/): meta-mesh to run multiple service meshes.
 
 Here I show you Linkerd 2.0 in action:
