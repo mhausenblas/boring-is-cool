@@ -186,11 +186,11 @@ Again, we're early days concerning service meshes. But, if you have a non-trivia
 - [Linkerd2](https://linkerd.io/2/overview/): a nice and lightweight alternative to Istio with a focus on developers. I took a closer look at it [here](https://hackernoon.com/linkerd-2-0-service-ops-for-you-and-me-281cc5bd6424).
 - [Consul Connect](https://www.hashicorp.com/blog/consul-1-2-service-mesh): can't say much since I haven't tried it but looks promising to me.
 - [AWS App Mesh](https://aws.amazon.com/app-mesh/): an Amazon-specific mesh using Envoy as its data plane and comes with a fully managed control plane, can be used  with Fargate, ECS, EKS, and also self-managed Kubernetes on EC2.
-- [SuperGloo](https://supergloo.solo.io/): meta-mesh to run multiple service meshes.
+- [SuperGloo](https://supergloo.solo.io/): meta-mesh to run multiple service meshes (Istio, Linkerd2, Consul Connect, AWS App Mesh).
 
-Here I show you Linkerd 2.0 in action:
+Here I show you Linkerd2 in action:
 
-![Linkerd 2.0 example](img/linkerd2-example.png)
+![Linkerd2 example](img/linkerd2-example.png)
 
 ### Service mesh good practices
 
@@ -298,4 +298,4 @@ Further pointers to good practices and/or collections of such, to get you starte
 
 ----
 
-© [Michael Hausenblas](https://twitter.com/mhausenblas), November 2018 
+© [Michael Hausenblas](https://twitter.com/mhausenblas), December 2018 
