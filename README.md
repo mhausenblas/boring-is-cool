@@ -200,6 +200,7 @@ Some pointers to good practices and/or collections of such, to get you started:
 - [The Enterprise Path to Service Mesh Architectures](https://blog.gingergeek.com/2018/08/now-available-the-enterprise-path-to-service-mesh-architectures/)
 - [The Service Mesh](https://pages.buoyant.io/Oreilly-Service-Mesh-Book.html)
 - [Introducing Istio Service Mesh for Microservices](https://developers.redhat.com/books/introducing-istio-service-mesh-microservices/)
+- [Istio in Action](https://www.manning.com/books/istio-in-action)
 
 ## Let's talk about serverless
 
