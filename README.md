@@ -208,7 +208,7 @@ So, yeah, [serverless](https://winterwindsoftware.com/serverless-definitions/) i
 
 ![Serverless overview](img/serverless.png)
 
-Serverless is an umbrella term for a class of technologies, focusing on the execution (no provisioning, managed, and native auto-scaling) and typically with a billing model ala 'pay only for what you actually use', rather than on a fixed basis, such as on a monthly basis.
+Serverless is an umbrella term for a class of technologies, focusing on the execution (no provisioning, managed, and native auto-scaling) and typically with a 'pay only for what you actually use' billing model, rather than on a fixed basis, such as on a monthly basis.
 
 One of the most popular—or maybe it's the loudest of the kewl kids, who knows—serverless offerings is the so called Function-as-a-Service (FaaS). With AWS Lambda, Amazon has been trailblazing this area since 2014 and it is nowadays used in a range of event-driven [use cases](https://dashbird.io/blog/best-aws-lambda-serverless-use-cases/).
 
