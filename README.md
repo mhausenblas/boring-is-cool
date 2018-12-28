@@ -254,7 +254,7 @@ So one end-to-end iteration, from code change to running the app consists of the
 How to short-cut this full cycle? The approaches can roughly be categorized as follows:
 
  - local builds, for example, using the [container engine in Minikube](https://abhishek-tiwari.com/local-development-environment-for-kubernetes-using-minikube/)
- - sync-based by replacing binary in running container such as [ksync](https://vapor-ware.github.io/ksync/)
+ - sync-based by replacing binary in running container such as [ksync](https://vapor-ware.github.io/ksync/) or [DevSpace](https://github.com/covexo/devspace)
  - proxy-based such as [Telepresence](https://www.telepresence.io/)
 
 Interesting cloud native online prototyping, testing, and development environments:
