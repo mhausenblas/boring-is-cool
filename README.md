@@ -214,7 +214,7 @@ One of the most [popular serverless offerings](https://m.subbu.org/contemporary-
 
 ![FaaS overview](img/faas.png)
 
-Triggers (such as a HTTP API call, time, or upload to an S3 bucket) cause a function invocation. The function management part allows you to update and configure functions (typically via CLI and/or UI, based on a HTTP API), and the integrations allow the functions to externalize state.
+Triggers such as an HTTP API call, time, or an upload to an S3 bucket cause function invocations. The function management part allows you to update and configure functions, typically via CLI and/or UI, based on a HTTP API, and the integrations allow the functions to externalize state.
 
 With AWS Lambda, Amazon has been trailblazing this area since 2014 and it is nowadays used in a range of event-driven [use cases](https://dashbird.io/blog/best-aws-lambda-serverless-use-cases/).
 
