@@ -57,6 +57,11 @@ So [containers](http://containerz.info/) are really just Linux process groups on
 
 ![containers overview](img/containers.png)
 
+[In contrast](https://medium.com/@jessgreb01/what-is-the-difference-between-a-process-a-container-and-a-vm-f36ba0f8a8f7) to virtual machines (VM), all containers on a machine share the same Linux kernel. Under the [Open Container Initiative](https://www.opencontainers.org/) (OCI), both the [container runtime](https://github.com/opencontainers/runtime-spec) aspects as well as the container [image format](https://github.com/opencontainers/image-spec) has been de-fact standardized.
+
+
+
+
 ## Let's talk about Kubernetes
 
 You want to benefit from [Kubernetes](https://kubernetes.io/), right? You want portable applications, getting features out to your customers faster, use modern deployment mechanisms, have autoscaling, and more? 
