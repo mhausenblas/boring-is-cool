@@ -317,4 +317,4 @@ Further pointers to good practices and/or collections of such, to get you starte
 
 ----
 
-© [Michael Hausenblas](https://twitter.com/mhausenblas), December 2018 
+© [Michael Hausenblas](https://twitter.com/mhausenblas), Jan 2019
