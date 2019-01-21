@@ -59,7 +59,7 @@ So [containers](http://containerz.info/) are really just Linux process groups on
 
 [In contrast](https://medium.com/@jessgreb01/what-is-the-difference-between-a-process-a-container-and-a-vm-f36ba0f8a8f7) to virtual machines (VM), all containers on a machine share the same Linux kernel. Under the [Open Container Initiative](https://www.opencontainers.org/) (OCI), both the [container runtime](https://github.com/opencontainers/runtime-spec) aspects as well as the container [image format](https://github.com/opencontainers/image-spec) has been de-fact standardized.
 
-
+For cases where the learning curve and operational overhead of a full-blown container orchestrator such as Kubernetes can not be justified, you can run single containers supervised by `systemd` or, if you run in the public cloud, leverage offerings such as AWS [Fargate](https://aws.amazon.com/fargate/) or [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/).
 
 
 ## Let's talk about Kubernetes
