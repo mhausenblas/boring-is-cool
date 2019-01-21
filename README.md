@@ -2,6 +2,7 @@ Hi! My name is [Michael](https://mhausenblas.info) and I'm a developer advocate 
 
 1. [Why?](#why)
 1. [Release early, release often](#lets-talk-about-release-early-release-often)
+1. [Containers](#lets-talk-about-containers)
 1. [Kubernetes](#lets-talk-about-kubernetes)
 1. [Observability](#lets-talk-about-observability)
 1. [Service meshes](#lets-talk-about-service-meshes)
