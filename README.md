@@ -51,9 +51,15 @@ Some of the good practices (such as zero-downtime deployments or A/B testing) an
 blog posts and books have now been, quite literally, encoded in software. 
 You might have guessed it already, this piece of software I'm talking about here, that takes the lessons learned of running containerized microservices (at scale) and provides it to you in a free and open source format is, indeed, Kubernetes.
 
+## Let's talk about containers
+
+So [containers](http://containerz.info/) are really just Linux process groups on steroids. Using Linux kernel features such as `namespaces`, `cgroups`, and copy-on-write filesystems, containers allow you to manage application-level dependencies, such as runtimes or libraries:
+
+![containers overview](img/containers.png)
+
 ## Let's talk about Kubernetes
 
-So you want to benefit from [Kubernetes](https://kubernetes.io/), right? You want portable applications, getting features out to your customers faster, use modern deployment mechanisms, have autoscaling, and more? 
+You want to benefit from [Kubernetes](https://kubernetes.io/), right? You want portable applications, getting features out to your customers faster, use modern deployment mechanisms, have autoscaling, and more? 
 
 I've got good news and not so good news for you. Yes, it's totally feasible, but you gotta do your homework first. You have to first do the, surprise, boring stuff (!)
 
