@@ -31,7 +31,7 @@ many features and fixing many bugs. So, in this context it's more than understan
 It's just too expensive, both time-wise and money-wise. 
 
 The first time you hear people [reporting](https://medium.com/netflix-techblog/how-we-build-code-at-netflix-c5d9bd727f15) that they're 
-releasing a new version of their app [many](https://code.fb.com/web/rapid-release-at-massive-scale/) [times](https://www.netsolutions.com/insights/why-do-great-product-companies-release-software-to-production-multiple-times-a-day/) every day
+releasing a new version of their app [many times](https://code.fb.com/web/rapid-release-at-massive-scale/) every day
 or maybe even [a couple of times per hour](https://news.ycombinator.com/item?id=2971521) you might go like: woah, that's some crazy talking there.
 But bear with me for a moment. Don't compare that kind of releases with your monolith-once-per-year release. They are fundamentally different in
 a number of ways:
